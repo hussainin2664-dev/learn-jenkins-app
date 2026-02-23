@@ -1,0 +1,13 @@
+pipeline{
+    agent only
+
+    stages{
+        stage("Hello"){
+            sh'''
+
+            echo "Start my first pipeline"
+
+            '''
+        }
+    }
+}
