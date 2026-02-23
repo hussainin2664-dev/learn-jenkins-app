@@ -1,13 +1,12 @@
-pipeline{
-    agent only
+pipeline {
+    agent any
 
-    stages{
-        stage("Hello"){
-            sh'''
-
-            echo "Start my first pipeline"
-
-            '''
+    stages {
+        stage('Hello') {
+            steps {
+                sh "'echo' Hello World"
+                sh "whoami"
+            }
         }
     }
 }
